@@ -1,173 +1,251 @@
-# Crypto_Master
+# FX_Master
+> FinTech Project 2
 
-![](images/readme-image.jpg)
 
-*Image Source: https://www.forbes.com/fintech/2021/#9ba2c8731a63*
+![](./Images/intro_readme_img.jpg)
 
-> FinTech Project 1
 
-### Group Members
+# Group Members
 
-Flora Zhao, Navpreet Nat and Sreeni Patnaik
+Pauline Liu, Flora Zhao, Md Muhasenul Haque
+    
 
-## Instructions on How to Read Through the Work
+# Instructions on How to Read Through the Work
 
-**1.** **Please begin with the jupyter notebook file titled "crypto master" which contains the retrospective analysis which has been conducted using historical data**
+**1.** Please begin with the jupyter notebook file titled `fx_master_final.ipynb` which contains the retrospective analysis which has been conducted using historical data.
 
-**2.** **Then, please access the jupyter notebook file titled "MonteCarlo_Interactive" which is an interactive Monte Carlo Simulator using pandas data-reader**
+**2.** The csv files for the data used in this project can be found in the folder `Resources`. 
 
-**3.** **The presentation may be found under the filename "Presentation.pptm"**
+**3.** The presentation may be found under the folder `Presentation`.
 
-**4.** **Finally, we wanted to incorporate the Python 'Panels' library into our code however were unable to do so due to time contraints, and so we have instead included the headway we've made so far. While it is not a comprehensive analysis, it does display the functionality of the Panels library and may be found as the jupyter notebook file titled "Crypto_Dashboard"**
+**4.** The images used in the README file can be found under the folder `Images`.
 
-*All jupyter notebook files may be found in the subfolder titled "codes"*
+**5.** In addition, for the purpose of choosing the best set of data to include in the models, we have also created two other alternative code files which contain different set of data. The file `fx_master_cash_interest.ipynb` only used the cash rate and interest rate for Australia and the USA. The file `fx_master_cash_interest_unemployment_indices.ipynb` added unemployment rate of Australia and the USA to the final version of code (`fx_master_final.ipynb`). The final version of code used the cash rate and interest rate for Australia and the USA in conjunction with USD index and Australian commodity price index. Please feel free to review the alternative versions of code, which can be found under the folder `Comparison`.
 
-## Introduction
+# Development
 
-For our first project, we showcase what we have learnt in Python so far by addressing the conundrum of determining the ideal cryptocurrency investment strategy. The decentralised world has proved to be a domain of extreme growth, great opportunity and seemingly unlimited potential, while simultaneously presenting itself as a risky, highly volatile, unpredictable and underregulated landscape that can be dominated and swayed easily by invested interests.
+This code is built in Jupyter notebook. The process must be pretty much same when executing from GitBash on WindowsPC. If you are using VSCode then the required extensions/modules can be installed from VSCode GUI. To ensure, a suitable environment is existing to execute this code, you will need to have python3 and pip3 installed already. The Python version used to write this code is 3.9.12, any verison older than version 3 might not work efficiently.
 
-We set out to find clarity in a murky cryptoverse by analysing past movements, predicting future trends, and determining for ourselves whether safer and more reliable investment strategies are possible in these turbulent waters.
+# Dependencies
 
-### Motivation
+Apart from python3 and pip3, you will need to have jupyterlab, conda, anaconda, pandas, numpy, os, tradermade, pathlib, datetime, sklearn, matplotlib, tensorflow, scikitplot, python-dotenv installed at the operating system level.
 
-Cryptocurrency holds great potential for future economies, and despite its high volatility and fluctuating retail confidence, it certainly presents opportunities for the invention of tools that reassure investors by providing clearer market predictions and stability. We were eager to see whether we could set about creating such tools, and investigating the degree of commitment and labour required for their inception. Essentially, whether it was possible to make any meaningful predictions given the knowledge we have accumulated so far.
+The code is heavily dependent on pandas, numpy, sklearn, tensorflow and matplotlib modules.
 
-### Interests
+Following modules must be already installed before running the code and conda environment must be activated as well. To execute the code, Jupyter notebook must be used. 
 
-* **Money and Financial Markets**
+Below commands are Windows compatible to install required modules/tools.
 
-* **Secure investments for long-term planning**
+As mentioned above ensure python3 and pip3 are already installed - preferrable version 3
 
-* **Opportunities for financial growth**
+	Install Jupyterlab
 
-### Questions
+		pip install jupyterlab
 
-* **Is it possible to narrow in on the ideal cryptocurrency portfolio?**
+	Install conda..
 
-* **Will Monte Carlo Simulations be able to provide realistic future portfolio predictions?**
+		pip install conda or brew install conda
 
-* **Is Dollar-Cost Averaging an effective strategy for investing in crypto vs an initial Lump Sum?**
+	Install matplotlib..
 
-### Core Focus
+		pip install matplotlib
 
-1. **Predict how cryptocurrency portfolios evolve over time by analyzing their history**
+	Install anaconda3..
 
-2. **Discover the ideal cryptocurrency portfolio that will generate the greatest future returns**
+		pip install anaconda3
+	
+	Install python-dotenv module..
 
-3. **Evaluate the effectiveness of Dollar-Cost Averaging vs an Initial Lump Sum as a crypto investment strategy**
+		python3 -m pip3 install python-dotenv
 
-## Conclusions / Results
+	Install tradermade SDK
 
-### The Ideal Cryptocurrency Portfolio
+		pip install tradermade
 
-We decided that, at least at the level of the portfolios' composition, it would be best to select coins that have a large market cap as this would ensure that volatility is less than other less 'stable' coins, and would thus be the safer option.
+	Installing scikit-learn
 
-The coins that we arrived at were;
+		pip install -U scikit-learn
 
-* ```BTC``` **or Bitcoin**
+	Install TensorFlow
 
-* ```ETH``` **or Ethereum**
+		pip install --upgrade tensorflow     
 
-* ```BNB``` **or Binance**
+	Install scikitplot
 
-* ```XRP``` **or Ripple**
+		pip install scikit-plot
 
-* ```ADA``` **or Cardano**
+	Install DateTime
 
-* ```SOL``` **or Solana**
+		pip install DateTime 
 
-### The Monte Carlo Simulation as a tool for Cryptocurrency Forecasting
+	Install pathlib
 
-We found through our testing that while a MCS can be quite an effective tool for forecasting the potential price fluctuations of traditional stocks and equities, this applicability does not necessarily translate over to the cryptoverse. Through application of the interactive program that we developed, we found that the predictions had a variablity that was so vast that no meaningful conclusions could be drawn.
+		pip install pathlib
 
-It became clear that due to the close-to exponential nature of cryptocurrency price growth over its entire history, retrospective analyses become severely skewed to expect similar price movements going into the future, and while such activity could arguably be a possibility, it's obvious that far more sophisticated techniques are required to meaningfully predict price movements in this space.
+# Execution steps
 
-![](images/MCS_Output.png)
+To successfully execute the code...
 
-### Dollar-Cost Averaging vs Initial Lump-Sum Investment
+conda environment must be created and activated.
 
-We were very surprised to discover that what may seemingly appear to be a worthwhile investment strategy in traditional use cases, i.e. Dollar-Cost Averaging (where you invest into an equity/stock incrementally over time as opposed to all at once), such techniques proved to not be so fruitful in the domain of cryptocurrency investment.
+	conda create -n cenv python=3.9.12
+	conda activate cenv
 
-The numbers were crunched, and the determination was made that you are infact much better off investing in crypto all at once with a lump-sum investment rather than incrementally over time. This analysis was done using historical data, and the supposition was such that an investor in the past would have invested in a cryptocurrency in one go, versus investing slowly over time as we cannot at this stage accurately project how such investment would look into the future.
+To execute the code from Windows - you will need Visual Studio Code installed as well to look at the code.
 
-Lump sum was found to trump DCA 80% of the time with the coins that we selected, with only ETH showing that DCA could have been an effective investment strategy. This comparison could have also been more comprehensive if we compared the sharpe ratios against the coins' standard deviations, thus taking risk factors into consideration, however we were unable to cover these in this project due to time contraints.
+The file 'fx_master_final.ipynb' is the file to be opened from the 'Jupyter notebook' interface ONLY.
 
-The plots that were generated during these analyses are as follows:
+Clone the directory which contains all the .csv files and the .ipynb file to your system using the following commands
 
-![](images/crypto_price_history.png)
+	git clone https://github.com/muhasenulhaque/Project-2-Machine-Learning-and-Algo-Trading.git 
 
-![](images/crypto_daily_return.png)
+Once the clone completes.. 
 
-![](images/crypto_cumulative_return.png)
+	Go to the directory "Project-2-Machine-Learning-and-Algo-Trading"
 
-![](images/crypto_standard_deviation.png)
+	cd Project-2-Machine-Learning-and-Algo-Trading
 
-![](images/crypto_sharpe_ratio.png)
+Execute 'Jupyter notebook' command
 
-![](images/DCA_vs_LumpSum.png)
+In the Jupyter notebook interface, open the file 'fx_master_final.ipynb'
+
+Please note, as the daily AUDUSD close price was pull from the tradermade API with an environment file (.env) on the local machine. For the readers' convenience, the close price has been saved as a csv file and was read back to the code file. Please do not load the part where it says "SKIP LOADING THIS PART". Instead, keep going down and start loading the code below the line where it says "START LOADING FROM HERE".
+
+
+# Introduction
+
+An exchange rate is a rate at which one currency will be exchanged for another currency and affects trade and the movement of money between countries.
+
+Exchange rates are impacted by both the domestic currency value and the foreign currency value.
+
+The exchange rate between two currencies is commonly determined by the economic activity, market interest rates, gross domestic product, and unemployment rate in each of the countries. Commonly called market exchange rates, they are set in the global financial marketplace, where banks and other financial institutions trade currencies around the clock based on these factors. Changes in rates can occur hourly or daily with small changes or in large incremental shifts.
+
+# Motivation
+
+This project is movitated by analysing different factors that may influence the fx rates, and try to use machine learning models to predict the moving direction of the exchange rate.
+
+# Goals
+
+1. Research on different factors that may have greater influence on the fx rate fluctuation
+2. Predict the moving direction of the future fx rate (Up or Down) using binary classification
+3. Compare different models and try to find the better model for the prediction
+
+# Methodology & Steps
+1. Data Preparation: Deciding on the factors that may influence the fx rates and how to pull of the historic data for the code
+2. Train & Test the data: using different split of training/test data set to fine tune the optimised accuracy of the model
+3. Make predictions and draw the plots
+4. Model Evaluation
+
+# Data Preparation and Model Training
+## Factors that matters
+- Unemployment Rate
+- Interest Rate
+- Inflation Rate
+- USD index
+- Australian commodity price index
+
+## Model Summary
+- LOGISTIC REGRESSION
+- ADABOOST
+- NEURAL NETWORK
+
+
+# Conclusions / Results
+
+## AdaBoost Performance
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+## Logistic Regression Performance
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+## Neural Network Performance
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+## Difficulties Faced
+
+xxxxxxxxxxxxxxx
+
+
+
+## Conclusion
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
 
 ## API and New Library
 
-#### We used Pandas Data-Reader which is both an API and a new Library
+## New Machine Learning Models Used
+- AdaBoost
+## New Libraries Used
+- Scikitplot : to plot the confusion metrics
 
-## References
+## New APIs Used
+- tradermade: to get historical/real-time close price for AUD/USD
 
-* **1** [Cryptocurrencies from Yahoo Finance](https://finance.yahoo.com/cryptocurrencies)
 
-* **2** [How to use Google Finance](https://support.google.com/docs/answer/3093281)
+# References
 
-* **3** [How to Fetch BTC price from Google Finance](https://stackoverflow.com/questions/45081166/get-btc-prices-on-google-sheets-from-google-finance)
+* **1** [6 Factors That Influence Exchange Rates](https://www.investopedia.com/trading/factors-influence-exchange-rates/)
 
-* **4** [How to use the Cryptocompare API](https://robotwealth.com/fun-with-the-cryptocompare-api/)
+* **2** [What Indicators Are Used in Exchange Rate Forecasting?](https://www.investopedia.com/ask/answers/021715/what-economic-indicators-are-most-used-when-forecasting-exchange-rate.asp)
 
-* **5** [Top 10 Python Libraries for Data Science for 2023](https://www.simplilearn.com/top-python-libraries-for-data-science-article#8_pytorch)
+* **3** [3 Examples of How Unemployment Rates Impact Currency Prices](https://www.valutrades.com/en/blog/3-examples-of-how-unemployment-rates-impacts-currency-prices)
 
-* **6** [Details Regarding scikit-learn Machine Learning](https://scikit-learn.org/stable/)
+* **4** [Australian Bureau of Statistics Unemployment Data and Statistics](https://www.abs.gov.au/statistics/labour/employment-and-unemployment/labour-force-australia/nov-2022#unemployment)
 
-* **7** [A Rundown on Dollar-Cost Averaging](https://www.gemini.com/cryptopedia/dollar-cost-average-crypto-invest)
+* **5** [Exchange Rate Prediction: Machine Learning with 5 Regression Models](https://towardsdatascience.com/exchange-rate-prediction-machine-learning-with-5-regression-models-d7a3192531d)
 
-* **8** [How to get historical Stock and Cryptocurrency price data in Python](https://medium.com/@phanhaihiep/how-to-get-historical-stock-and-cryptocurrencys-price-data-in-python-556e00ff4714)
+* **6** [Monthly Consumer Price Index Indicator](https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/monthly-consumer-price-index-indicator/latest-release)
 
-* **9** [Video Tutorial on Monte Carlo Simulation by Quant Py](https://www.youtube.com/watch?v=6-dhdMDiYWQ)
+* **7** [Federal Funds Rate - 62 Year Historical Chart](https://www.macrotrends.net/2015/fed-funds-rate-historical-chart)
 
-* **10** [Code that Corresponds to the Video Tutorial](https://quantpy.com.au/python-for-finance/simulated-stock-portolio/)
+* **8** [Consumer Price Index, Australia](https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/consumer-price-index-australia/latest-release)
 
-* **11** [How to pip-install Pandas Data-Reader](https://pandas-datareader.readthedocs.io/en/latest/)
+* **9** [US Bureau of Labor Statistics Data CPI](https://data.bls.gov/timeseries/CUUR0000SA0&amp;amp;amp;output_view=pct_1mth)
 
-* **12** [How to Calculate a Confidence Interval Using numpy](https://medium.com/swlh/building-confidence-interval-using-pythons-numpy-b96cd6e7f2d4)
+* **10** [Ticks Volumns](https://forums.babypips.com/t/oanda-trading-volume/84294)
+
+* **11** [Forex Data API](https://tradermade.com/forex)
+
+* **12** [Change monthly data to daily in pandas](https://stackoverflow.com/questions/66759539/change-monthly-data-to-daily-in-pandas)
 
 * **13** [Tutorial on Pandas Data-Reader](https://thecleverprogrammer.com/2021/03/22/pandas-datareader-using-python-tutorial/)
 
-* **14** [Documentation Regarding Plotting on Matplotlib](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html)
+* **14** [Multiple Linear Regression With scikit-learn - GeeksforGeeks](https://www.geeksforgeeks.org/multiple-linear-regression-with-scikit-learn/)
 
-* **15** [Documentation Regarding numpy.ndarray](https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html)
+* **15** [the difference between random_state = 0 & random_state = 1 | Data Science and Machine Learning](https://www.kaggle.com/discussions/getting-started/102258)
 
-* **16** [Data Science Libraries](https://www.simplilearn.com/top-python-libraries-for-data-science-article#8_pytorch)
+* **16** [Time Series Talk : ARIMA Model](https://www.simplilearn.com/top-python-libraries-for-data-science-article#8_pytorchhttps://www.youtube.com/watch?v=3UmyHed0iYE)
 
-* **17** [Normalize Function to Remove Datetime in Dataframe](https://stackoverflow.com/questions/50845338/remove-time-portion-of-datetime-index-in-pandas)
+* **17** [statsmodels.tsa.arima.model.ARIMA](https://www.statsmodels.org/dev/generated/statsmodels.tsa.arima.model.ARIMA.html)
 
-* **18** [How to Convert a String to an Integer](https://www.geeksforgeeks.org/how-to-take-integer-input-in-python/)
+* **18** [AUD vs. US Dollar Index](https://en.macromicro.me/collections/345/mm-aud/18739/aud-dxy)
+
+* **19** [Drivers of the Australian Dollar Exchange Rate](https://www.rba.gov.au/education/resources/explainers/drivers-of-the-aud-exchange-rate.html#:~:text=Australia%20has%20a%20floating%20exchange,in%20the%20foreign%20exchange%20market.)
+
+* **20** [The Commodity Price and Exchange Rate Dynamics](https://www.scirp.org/journal/paperinformation.aspx?paperid=79731)
+
+* **21** [Index of Commodity Prices](https://www.rba.gov.au/statistics/frequency/commodity-prices/2021/)
+
+* **22** [How to Calculate Compound Investments Semi-Annually](https://budgeting.thenest.com/calculate-compound-investments-semiannually-26842.html)
+
+* **23** [Historical inflation rates for United States of America](https://www.rateinflation.com/inflation-rate/usa-historical-inflation-rate/)
+
+* **24** [Exchange Rate Prediction (Part 1): EDA & Data Visualisation](https://medium.com/analytics-vidhya/exchange-rate-prediction-part-1-276b6cd5338)
+
+* **25** [Exchange Rate Prediction: Time Series Forecasting with ARIMA](https://medium.com/towards-data-science/exchange-rate-prediction-time-series-forecasting-with-arima-27260faafcdc)
+
+* **26** [Top 10 Binary Classification Algorithms a Beginner’s Guid](https://towardsdatascience.com/top-10-binary-classification-algorithms-a-beginners-guide-feeacbd7a3e2)
+
+* **27** [Classification: ROC Curve and AUC](https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc)
+
+* **28** [How to Plot a ROC Curve in Python (Step-by-Step)](https://www.statology.org/plot-roc-curve-python/)
 
 ---
 
-*Presentation Image References*
 
-* **1** [BTC Coin](https://www.barrons.com/articles/things-to-know-today-51666952850)
-
-* **2** [ETH Coin](https://www.dmarge.com/ethereum-price-prediction-aud)
-
-* **3** [BNB Coin](https://play.google.com/store/apps/details?id=com.binance.dev&hl=en_AU&gl=US)
-
-* **4** [XRP Coin](https://cryptomode.com/3-reasons-to-use-the-xrp-toolkit-when-interacting-with-the-xrp-ledger/)
-
-* **5** [ADA Coin](https://www.newsbtc.com/analysis/ada/why-cardano-ada-may-breakout-in-a-bull-run-to-1/)
-
-* **6** [SOL Coin](https://coinmarketcap.com/currencies/solana/)
-
-* **7** [Mountain](https://i.pinimg.com/originals/1d/3f/43/1d3f4336e6d4d0b3bf9b1d42948db42c.jpg)
-
----
-
-*November 7th 2022*
+*Jan 11th 2023*
 
 ---
